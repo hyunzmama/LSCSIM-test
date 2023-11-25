@@ -1,0 +1,36 @@
+################################################################
+# This is an input file for CupParam.
+# It consists of simple indentifier/floating point value pairs, one to a line.
+# Lines beginning with "#" are ignored; blank lines are also ignored.
+# Anything after the identifier/value pair on a line is ignored.
+################################################################
+
+################################################################
+# Note: the following physics-process control parameters should only be
+# changed prior to /run/initialize
+################################################################
+omit_muon_processes      1.0    # non-zero causes muon processes to be skipped
+omit_hadronic_processes  1.0    # non-zero causes neutron, etc., to be skipped
+
+################################################################
+# Note: the following geometry parameters should only be changed immediately
+# prior to a geometry build or re-build.
+################################################################
+# option flag
+omit_id_pmts		0	# non-zero means no PMTs in Inner Detector
+
+# calibration device geometry
+# stainless steel weight (lengths in mm)
+SS_weight_radius                31.8
+SS_weight_length                51.0
+SS_weightcone_height            28.6
+SS_weightcone_apexradius         3.2
+SS_weight_lowerrod_length       98.0
+
+#fishline (lengths in mm)
+fishline_radius			0.2
+
+#Timing LED (lengths in mm)
+LED_enclosure_radius		25.0
+LED_enclosure_SS_length		50.0
+LED_enclosure_acrylic_length	50.0
