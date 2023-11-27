@@ -498,6 +498,9 @@ void CupPhysicsList::ConstructOp() {
 #include "G4PionPlusInelasticProcess.hh"
 #include "G4ProtonInelasticProcess.hh"
 #include "G4TritonInelasticProcess.hh"
+#include "G4ChipsKaonPlusInelasticXS.hh"
+#include "G4ChipsKaonZeroInelasticXS.hh"
+#include "G4ChipsKaonMinusInelasticXS.hh"
 
 // High energy FTFP model and Bertini cascade
 #include "G4CascadeInterface.hh"
@@ -676,8 +679,7 @@ void CupPhysicsList::ConstructHad() {
             G4KaonPlusInelasticProcess *theInelasticProcess =
                 new G4KaonPlusInelasticProcess("inelastic");
             theInelasticProcess->AddDataSet(
-                G4CrossSectionDataSetRegistry::Instance()->GetCrossSectionDataSet(
-                    G4ChipsKaonPlusInelasticXS::Default_Name()));
+                G4CrossSectionDataSetRegistry::Instance()->GetCrossSectionDataSet(G4ChipsKaonPlusInelasticXS::Default_Name()));
             theInelasticProcess->RegisterMe(theFTFModel1);
             theInelasticProcess->RegisterMe(theBERTModel0);
             pmanager->AddDiscreteProcess(theInelasticProcess);
